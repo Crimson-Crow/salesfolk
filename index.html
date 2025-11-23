@@ -156,9 +156,9 @@
 			
 			function getNextUpdateTime() {
 				const now = new Date();
-				const hour = d.getUTCHours();
+				const hour = now.getUTCHours();
 				const nextHour = hour % 3 === 0 ? hour + 3 : hour + (3 - (hour % 3));
-				const result = new Date(d);
+				const result = new Date(now);
 				result.setUTCHours(nextHour, 0, 0, 0);
 				return result;
 			}
